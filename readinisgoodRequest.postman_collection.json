@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "235372a4-b5b8-4d8f-ae0e-6434ff9d2fa2",
+		"name": "readinisgoodRequest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/customer/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Baris\",\r\n    \"surname\" : \"KKK\",\r\n    \"address\" : \"test address\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"create"
+					]
+				},
+				"description": "Creating Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/order/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\" : 5,\r\n    \"bookId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"create"
+					]
+				},
+				"description": "Creating Order"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/order/getById?orderId=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\" : 4,\r\n    \"bookId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/getById?orderId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Getting Order By ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/order/listByCustomerId?customerId=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\" : 4,\r\n    \"bookId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/listByCustomerId?customerId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"listByCustomerId"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Listing Orders By Customer ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/book/getById?bookId=10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\" : 4,\r\n    \"bookId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/getById?bookId=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "bookId",
+							"value": "10"
+						}
+					]
+				},
+				"description": "Getting Book By Id For Controlling Stock"
+			},
+			"response": []
+		}
+	]
+}
